@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/logo-mark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -34,7 +34,10 @@
     <!-- 1. Welcome -->
     <section id="screen-home" class="screen active">
       <div class="hero">
-        <p class="eyebrow reveal" style="--d:0"><i class="live-dot"></i>Official Photo Booth</p>
+        <p class="eyebrow reveal" style="--d:0">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.5 7.6 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2.6L15 4.5H9Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          Official Photo Booth
+        </p>
 
         <h1 class="reveal" style="--d:1">
           <span class="club">MS Club</span>
@@ -62,10 +65,22 @@
           </label>
         </div>
 
-        <ol class="steps">
-          <li class="reveal" style="--d:5"><b>01</b><span>Snap your photo</span></li>
-          <li class="reveal" style="--d:6"><b>02</b><span>We frame it for you</span></li>
-          <li class="reveal" style="--d:7"><b>03</b><span>Download &amp; share</span></li>
+        <ol class="steps reveal" style="--d:5">
+          <li>
+            <span class="step-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.5 7.6 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2.6L15 4.5H9Z"/><circle cx="12" cy="13" r="3.5"/></svg><b>1</b></span>
+            <span class="step-tx">Snap</span>
+            <small>Take your photo</small>
+          </li>
+          <li>
+            <span class="step-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><rect x="7.5" y="7.5" width="9" height="9" rx="1.5"/></svg><b>2</b></span>
+            <span class="step-tx">Frame</span>
+            <small>Auto-styled for you</small>
+          </li>
+          <li>
+            <span class="step-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg><b>3</b></span>
+            <span class="step-tx">Share</span>
+            <small>Download &amp; post</small>
+          </li>
         </ol>
       </div>
     </section>
@@ -128,12 +143,11 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
               Share
             </button>
-            <button class="btn btn-ghost" id="btn-retake">
+            <button class="btn btn-secondary btn-icon" id="btn-retake" aria-label="Retake" title="Retake">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6L4 8.7M4 4v4.7h4.7"/></svg>
-              Retake
             </button>
           </div>
-          <p class="hint" id="share-hint">Tip: Share opens WhatsApp, LinkedIn, Facebook &amp; more on your phone. Tag <b>MS Club</b> when you post!</p>
+          <p class="hint" id="share-hint">Share to WhatsApp, LinkedIn or Facebook and tag <b>MS Club</b>!</p>
 
           <div class="follow">
             <h3>Follow MS Club</h3>

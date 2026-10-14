@@ -360,7 +360,7 @@ async function share() {
   // Desktop / unsupported: save the image, then the user can post it
   download();
   $("#share-hint").innerHTML =
-    "Your photo has been downloaded. Upload it to <b>LinkedIn</b>, <b>Facebook</b> or <b>WhatsApp</b> and tag <b>MS Club</b>!";
+    "Downloaded! Post it on <b>LinkedIn</b>, <b>Facebook</b> or <b>WhatsApp</b> and tag <b>MS Club</b>.";
 }
 
 /* ---------- Events ---------- */
