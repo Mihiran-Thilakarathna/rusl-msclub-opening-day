@@ -17,6 +17,9 @@ const SHARE_TEXT =
   "#MSClubOpeningDay2026 #MSClub #RajarataUniversity";
 const FILE_NAME = "MSClub-OpeningDay-2026.jpg";
 
+const frameLogo = new Image();
+frameLogo.src = "assets/logo.png";
+
 const $ = (s) => document.querySelector(s);
 const screens = {
   home: $("#screen-home"),
@@ -248,37 +251,41 @@ async function drawFrame(source) {
   ctx.fillText("2026", bx + 58, by + bh / 2 + 1);
   ctx.restore();
 
-  // Title block
-  const ty = py + ps + 118;
+  // Club logo on the right of the bottom panel
+  const logoReady = await frameLogo.decode().then(() => true, () => false);
+  const lx2 = W - 60;
+  let logoW = 0;
+  if (logoReady) {
+    logoW = Math.min(330, frameLogo.naturalWidth);
+    const logoH = logoW * (frameLogo.naturalHeight / frameLogo.naturalWidth);
+    ctx.drawImage(frameLogo, lx2 - logoW, py + ps + 70 + (110 - logoH) / 2, logoW, logoH);
+  }
+
+  // Title block on the left, sized to fit beside the logo
+  const ty = py + ps + 112;
+  const maxTitleW = lx2 - logoW - 70 - 60;
   ctx.textBaseline = "alphabetic";
   ctx.fillStyle = FRAME.text;
-  ctx.font = '800 96px "Outfit", sans-serif';
-  const titleW = drawSpaced(ctx, "MS Club", 60, ty, -1);
+  let size = 76;
+  do {
+    ctx.font = `800 ${size}px "Outfit", sans-serif`;
+  } while (spacedWidth(ctx, "Club Opening Day", -1) > maxTitleW && --size > 40);
+  const titleW = drawSpaced(ctx, "Club Opening Day", 60, ty, -1);
 
-  ctx.font = '600 40px "Outfit", sans-serif';
-  const subW = spacedWidth(ctx, "OPENING DAY 2026", 9);
+  ctx.font = '600 36px "Outfit", sans-serif';
+  const sub = "RUSL  ·  2026";
+  const subW = spacedWidth(ctx, sub, 8);
   ctx.fillStyle = multiGradient(ctx, 60, 0, 60 + subW, 0);
-  drawSpaced(ctx, "OPENING DAY 2026", 62, ty + 62, 9);
+  drawSpaced(ctx, sub, 62, ty + 56, 8);
 
-  // Accent divider + taglines on the right
-  const rx = W - 60;
-  ctx.fillStyle = "rgba(255,255,255,0.14)";
-  ctx.fillRect(Math.max(60 + Math.max(titleW, subW) + 40, 600), ty - 76, 2, 140);
-  ctx.textAlign = "right";
-  ctx.font = '500 27px "Outfit", sans-serif';
-  ["Frame Your Vibe.", "Share Your Pride.", "Win a Surprise."].forEach((line, i) => {
-    const ly = ty - 50 + i * 46;
-    ctx.fillStyle = i === 2 ? FRAME.text : FRAME.muted;
-    ctx.fillText(line, rx - 24, ly);
-    ctx.fillStyle = FRAME.colors[i];
-    ctx.beginPath();
-    ctx.arc(rx - 6, ly - 9, 6, 0, Math.PI * 2);
-    ctx.fill();
-  });
-  ctx.textAlign = "left";
+  // Divider between title and logo
+  if (logoReady) {
+    ctx.fillStyle = "rgba(255,255,255,0.14)";
+    ctx.fillRect(Math.round((60 + titleW + lx2 - logoW) / 2), ty - 70, 2, 130);
+  }
 
   // Segmented accent under title
-  colorBar(ctx, 60, ty + 88, 160, 6, 6);
+  colorBar(ctx, 60, ty + 84, 160, 6, 6);
 }
 
 async function renderResult(source) {
