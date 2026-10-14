@@ -251,41 +251,31 @@ async function drawFrame(source) {
   ctx.fillText("2026", bx + 58, by + bh / 2 + 1);
   ctx.restore();
 
-  // Club logo on the right of the bottom panel
+  // Bottom panel, centred: logo, event title, then RUSL 2026
+  const cx = W / 2;
+  const top = py + ps + ring;
   const logoReady = await frameLogo.decode().then(() => true, () => false);
-  const lx2 = W - 60;
-  let logoW = 0;
   if (logoReady) {
-    logoW = Math.min(330, frameLogo.naturalWidth);
+    const logoW = 290;
     const logoH = logoW * (frameLogo.naturalHeight / frameLogo.naturalWidth);
-    ctx.drawImage(frameLogo, lx2 - logoW, py + ps + 70 + (110 - logoH) / 2, logoW, logoH);
+    ctx.drawImage(frameLogo, cx - logoW / 2, top + 22, logoW, logoH);
   }
 
-  // Title block on the left, sized to fit beside the logo
-  const ty = py + ps + 112;
-  const maxTitleW = lx2 - logoW - 70 - 60;
   ctx.textBaseline = "alphabetic";
   ctx.fillStyle = FRAME.text;
-  let size = 76;
-  do {
-    ctx.font = `800 ${size}px "Outfit", sans-serif`;
-  } while (spacedWidth(ctx, "Club Opening Day", -1) > maxTitleW && --size > 40);
-  const titleW = drawSpaced(ctx, "Club Opening Day", 60, ty, -1);
+  ctx.font = '800 58px "Outfit", sans-serif';
+  drawSpaced(ctx, "CLUB OPENING DAY", cx, top + 160, 3, "center");
 
-  ctx.font = '600 36px "Outfit", sans-serif';
-  const sub = "RUSL  ·  2026";
-  const subW = spacedWidth(ctx, sub, 8);
-  ctx.fillStyle = multiGradient(ctx, 60, 0, 60 + subW, 0);
-  drawSpaced(ctx, sub, 62, ty + 56, 8);
+  ctx.font = '600 30px "Outfit", sans-serif';
+  const sub = "RUSL 2026";
+  const subW = spacedWidth(ctx, sub, 12);
+  ctx.fillStyle = multiGradient(ctx, cx - subW / 2, 0, cx + subW / 2, 0);
+  drawSpaced(ctx, sub, cx, top + 206, 12, "center");
 
-  // Divider between title and logo
-  if (logoReady) {
-    ctx.fillStyle = "rgba(255,255,255,0.14)";
-    ctx.fillRect(Math.round((60 + titleW + lx2 - logoW) / 2), ty - 70, 2, 130);
-  }
-
-  // Segmented accent under title
-  colorBar(ctx, 60, ty + 84, 160, 6, 6);
+  // Thin rules either side of RUSL 2026
+  ctx.fillStyle = "rgba(255,255,255,0.18)";
+  ctx.fillRect(cx - subW / 2 - 96, top + 195, 70, 2);
+  ctx.fillRect(cx + subW / 2 + 26, top + 195, 70, 2);
 }
 
 async function renderResult(source) {

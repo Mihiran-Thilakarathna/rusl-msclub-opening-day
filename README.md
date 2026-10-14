@@ -87,7 +87,7 @@ Open it on your phone for the best experience. The camera needs HTTPS, which Ver
 | Headings | **Plus Jakarta Sans** (MS Club) · **Cinzel Decorative** (Opening Day) |
 | Body / UI | **Inter** · **Outfit** (frame text) |
 
-The photo frame carries the club logo, the club colours and the "Club Opening Day · RUSL 2026" title.
+The photo frame carries the club logo, the club colours, and a centred "Club Opening Day · RUSL 2026" title.
 
 ---
 
