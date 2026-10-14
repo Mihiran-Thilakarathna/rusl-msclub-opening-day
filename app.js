@@ -335,13 +335,6 @@ function confetti() {
   })();
 }
 
-/* ---------- Cursor spotlight ---------- */
-const spot = document.querySelector(".spot");
-addEventListener("pointermove", (e) => {
-  spot.style.setProperty("--mx", e.clientX + "px");
-  spot.style.setProperty("--my", e.clientY + "px");
-}, { passive: true });
-
 /* ---------- Download & share ---------- */
 function download() {
   if (!resultUrl) return;
