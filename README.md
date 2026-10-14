@@ -24,17 +24,15 @@ Guests scan a QR code, take a photo, get it framed instantly, and share it in se
 
 ---
 
-## 📱 Scan to Try
+## 📱 Event QR Poster
+
+The official poster displayed at the **MS Club Opening Day 2026** venue. Guests scan this QR code to open the photo booth.
 
 <div align="center">
 
-<img src="downloads/MSClub-OpeningDay-2026-QR.png" alt="MS Club Opening Day 2026 QR code poster" width="360" />
-
-**[⬇️ Download the QR poster (PNG, 2000×2800)](https://rusl-msclub-opening-day.vercel.app/downloads/MSClub-OpeningDay-2026-QR.png)**
+<img src="downloads/MSClub-OpeningDay-2026-QR.png" alt="MS Club Opening Day 2026 event QR poster" width="360" />
 
 </div>
-
-> Print it at **A4 or larger** and keep the QR at least **8 cm** wide. Ask guests to scan it with their **phone camera app**, because some third-party QR apps block camera access.
 
 ---
 
@@ -96,7 +94,7 @@ The photo frame carries the club logo, the club colours, and a centred "Club Ope
 │   ├── logo-light.png    # Club logo (for light backgrounds)
 │   └── logo-mark.png     # "MS" mark, used as favicon
 └── downloads/
-    └── MSClub-OpeningDay-2026-QR.png   # Printable QR poster
+    └── MSClub-OpeningDay-2026-QR.png   # Event QR poster
 ```
 
 ---
