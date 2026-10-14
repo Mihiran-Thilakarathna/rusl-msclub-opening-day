@@ -5,67 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>MS Club Opening Day 2026</title>
   <meta name="description" content="Frame Your Vibe. Share Your Pride. Win a Surprise. — MS Club, Rajarata University of Sri Lanka." />
-  <meta name="theme-color" content="#0a0c12" />
+  <meta name="theme-color" content="#050605" />
   <meta property="og:title" content="MS Club Opening Day 2026" />
   <meta property="og:description" content="Frame Your Vibe. Share Your Pride. Win a Surprise." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0c12'/><circle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='3'/></svg>" />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" href="assets/logo-mark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="spot"></div>
+    <div class="grain"></div>
+  </div>
 
   <header class="topbar">
-    <div class="brand">
-      <img src="assets/logo.png" alt="MS Club logo" class="brand-logo" onerror="this.remove()" />
-      <div class="brand-text">
-        <strong>MS Club</strong>
-        <span>Rajarata University of Sri Lanka</span>
-      </div>
-    </div>
-    <span class="pill">Opening Day 2026</span>
+    <a class="brand" href="./" aria-label="MS Learning Club — Rajarata University of Sri Lanka">
+      <img src="assets/logo.png" alt="MS Learning Club, Rajarata University of Sri Lanka" class="brand-logo" />
+    </a>
+    <span class="pill"><i class="live-dot"></i>Opening Day 2026</span>
   </header>
 
   <main>
     <!-- 1. Welcome -->
     <section id="screen-home" class="screen active">
       <div class="hero">
-        <p class="eyebrow">Photo Booth</p>
-        <h1>MS Club<br /><span>Opening Day 2026</span></h1>
-        <p class="tagline">Frame Your Vibe. Share Your Pride. <em>Win a Surprise.</em></p>
-        <button class="btn btn-primary btn-lg" id="btn-start">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.5 7.6 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2.6L15 4.5H9Z"/><circle cx="12" cy="13" r="3.5"/></svg>
-          Take a Photo
-        </button>
-        <label class="link-btn">
-          or upload from gallery
-          <input type="file" accept="image/*" class="file-input" hidden />
-        </label>
+        <p class="eyebrow reveal" style="--d:0">✦ Official Photo Booth ✦</p>
+
+        <div class="mark-wrap reveal" style="--d:1">
+          <div class="mark-ring" aria-hidden="true"></div>
+          <img src="assets/logo-mark.png" alt="MS" class="mark" />
+          <span class="mark-club">Club</span>
+        </div>
+
+        <h1 class="reveal" style="--d:2">
+          <span class="od">Opening Day</span>
+          <span class="year">2026</span>
+        </h1>
+
+        <p class="tagline reveal" style="--d:3">
+          <span>Frame Your Vibe.</span> <span>Share Your Pride.</span> <em>Win a Surprise.</em>
+        </p>
+
+        <div class="cta reveal" style="--d:4">
+          <button class="btn btn-primary btn-lg" id="btn-start">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.5 7.6 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2.6L15 4.5H9Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+            Take a Photo
+          </button>
+          <label class="link-btn">
+            or upload from gallery
+            <input type="file" accept="image/*" class="file-input" hidden />
+          </label>
+        </div>
+
         <ol class="steps">
-          <li><b>1</b>Snap your photo</li>
-          <li><b>2</b>We frame it for you</li>
-          <li><b>3</b>Download &amp; share</li>
+          <li class="reveal" style="--d:5"><b>01</b><span>Snap your photo</span></li>
+          <li class="reveal" style="--d:6"><b>02</b><span>We frame it for you</span></li>
+          <li class="reveal" style="--d:7"><b>03</b><span>Download &amp; share</span></li>
         </ol>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="track">
+          <span>Frame Your Vibe</span><i>✦</i><span>Share Your Pride</span><i>✦</i><span>Win a Surprise</span><i>✦</i>
+          <span>Frame Your Vibe</span><i>✦</i><span>Share Your Pride</span><i>✦</i><span>Win a Surprise</span><i>✦</i>
+          <span>Frame Your Vibe</span><i>✦</i><span>Share Your Pride</span><i>✦</i><span>Win a Surprise</span><i>✦</i>
+          <span>Frame Your Vibe</span><i>✦</i><span>Share Your Pride</span><i>✦</i><span>Win a Surprise</span><i>✦</i>
+        </div>
       </div>
     </section>
 
     <!-- 2. Camera -->
     <section id="screen-camera" class="screen">
       <div class="camera-wrap">
-        <div class="viewfinder" id="viewfinder">
-          <video id="video" playsinline autoplay muted></video>
-          <div class="vf-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <div class="countdown" id="countdown" aria-live="assertive"></div>
-          <div class="flash" id="flash"></div>
-          <div class="cam-error" id="cam-error" hidden>
-            <p>We couldn't open your camera.</p>
-            <small>Allow camera access in your browser, or use your phone's camera instead.</small>
-            <label class="btn btn-primary">
-              Open phone camera
-              <input type="file" accept="image/*" capture="user" class="file-input" hidden />
-            </label>
+        <p class="cam-title">Strike a pose <span>✦</span></p>
+        <div class="vf-border">
+          <div class="viewfinder" id="viewfinder">
+            <video id="video" playsinline autoplay muted></video>
+            <div class="vf-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="scanline" aria-hidden="true"></div>
+            <div class="countdown" id="countdown" aria-live="assertive"></div>
+            <div class="flash" id="flash"></div>
+            <div class="cam-error" id="cam-error" hidden>
+              <p>We couldn't open your camera.</p>
+              <small>Allow camera access in your browser, or use your phone's camera instead.</small>
+              <label class="btn btn-primary">
+                Open phone camera
+                <input type="file" accept="image/*" capture="user" class="file-input" hidden />
+              </label>
+            </div>
           </div>
         </div>
 
@@ -79,7 +113,7 @@
           </button>
         </div>
         <label class="timer-toggle">
-          <input type="checkbox" id="timer" checked /> 3s timer
+          <input type="checkbox" id="timer" checked /> <span>3s timer</span>
         </label>
       </div>
     </section>
@@ -89,23 +123,26 @@
       <div class="result">
         <div class="preview-card">
           <img id="result-img" alt="Your framed MS Club Opening Day photo" />
-          <div class="rendering" id="rendering">Framing your photo…</div>
+          <div class="rendering" id="rendering"><span class="loader"></span>Framing your photo…</div>
         </div>
 
         <div class="result-side">
-          <h2>Looking great! ✨</h2>
+          <h2>Looking <span>great!</span></h2>
           <p class="tagline small">Frame Your Vibe. Share Your Pride. <em>Win a Surprise.</em></p>
 
           <div class="actions">
             <button class="btn btn-primary" id="btn-download">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
-              Download Photo
+              Download
             </button>
             <button class="btn btn-secondary" id="btn-share">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-              Share Photo
+              Share
             </button>
-            <button class="btn btn-ghost" id="btn-retake">Retake</button>
+            <button class="btn btn-ghost" id="btn-retake">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6L4 8.7M4 4v4.7h4.7"/></svg>
+              Retake
+            </button>
           </div>
           <p class="hint" id="share-hint">Tip: Share opens WhatsApp, LinkedIn, Facebook &amp; more on your phone. Tag <b>MS Club</b> when you post!</p>
 
@@ -131,9 +168,10 @@
     </section>
   </main>
 
-  <footer class="foot">© 2026 MS Club · Rajarata University of Sri Lanka</footer>
+  <footer class="foot">© 2026 MS Learning Club · Rajarata University of Sri Lanka</footer>
 
   <canvas id="canvas" hidden></canvas>
+  <canvas id="confetti" aria-hidden="true"></canvas>
   <script src="app.js"></script>
 </body>
 </html>

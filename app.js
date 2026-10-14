@@ -290,8 +290,57 @@ async function renderResult(source) {
   if (resultUrl) URL.revokeObjectURL(resultUrl);
   resultUrl = URL.createObjectURL(resultBlob);
   resultImg.src = resultUrl;
-  resultImg.onload = () => (rendering.hidden = true);
+  resultImg.onload = () => { rendering.hidden = true; confetti(); };
 }
+
+/* ---------- Confetti ---------- */
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function confetti() {
+  if (reduceMotion) return;
+  const cv = $("#confetti");
+  const cx = cv.getContext("2d");
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = innerWidth * dpr;
+  cv.height = innerHeight * dpr;
+  cx.scale(dpr, dpr);
+  const palette = ["#b8ff2e", "#e9ffc2", "#ffffff", ...FRAME.colors];
+  const parts = Array.from({ length: 140 }, () => ({
+    x: innerWidth / 2 + (Math.random() - 0.5) * 120,
+    y: innerHeight * 0.45,
+    vx: (Math.random() - 0.5) * 16,
+    vy: -Math.random() * 15 - 5,
+    s: Math.random() * 7 + 4,
+    r: Math.random() * Math.PI,
+    vr: (Math.random() - 0.5) * 0.3,
+    c: palette[(Math.random() * palette.length) | 0],
+  }));
+  let frame = 0;
+  (function tick() {
+    cx.clearRect(0, 0, innerWidth, innerHeight);
+    parts.forEach((p) => {
+      p.vy += 0.38;
+      p.vx *= 0.99;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.r += p.vr;
+      cx.save();
+      cx.translate(p.x, p.y);
+      cx.rotate(p.r);
+      cx.fillStyle = p.c;
+      cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+      cx.restore();
+    });
+    if (++frame < 160) requestAnimationFrame(tick);
+    else cx.clearRect(0, 0, innerWidth, innerHeight);
+  })();
+}
+
+/* ---------- Cursor spotlight ---------- */
+const spot = document.querySelector(".spot");
+addEventListener("pointermove", (e) => {
+  spot.style.setProperty("--mx", e.clientX + "px");
+  spot.style.setProperty("--my", e.clientY + "px");
+}, { passive: true });
 
 /* ---------- Download & share ---------- */
 function download() {
