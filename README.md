@@ -24,14 +24,6 @@ Guests scan a QR code, take a photo, get it framed instantly, and share it in se
 
 ---
 
-## 🔗 Live Demo
-
-**👉 [rusl-msclub-opening-day.vercel.app](https://rusl-msclub-opening-day.vercel.app/)**
-
-Open it on your phone for the best experience. The camera needs HTTPS, which Vercel provides.
-
----
-
 ## 📱 Scan to Try
 
 <div align="center">
