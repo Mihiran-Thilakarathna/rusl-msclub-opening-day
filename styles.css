@@ -291,7 +291,7 @@ h1 { display: flex; flex-direction: column; align-items: center; }
 
 /* ---------- Result ---------- */
 .result {
-  --card-w: min(100%, 460px, calc((100dvh - var(--top-h) - var(--foot-h) - 300px) * 0.8));
+  --card-w: min(100%, 460px, calc((100dvh - var(--top-h) - var(--foot-h) - 345px) * 0.8));
   display: flex; flex-direction: column; align-items: center; gap: 18px; width: 100%;
 }
 .preview-card {
@@ -318,7 +318,8 @@ h1 { display: flex; flex-direction: column; align-items: center; }
 .result-side h2 span { color: var(--lime); }
 .tagline.small { margin: 6px 0 16px; font-size: 14px; text-align: left; }
 .tagline.small em { color: var(--lime); }
-.actions { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.btn-retake { grid-column: 1 / -1; padding: 11px; font-size: 15px; }
 .hint { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
 .hint b { color: var(--lime); }
 
