@@ -55,14 +55,11 @@ The official poster displayed at the **MS Club Opening Day 2026** venue. Guests 
 
 ## 🧭 How It Works
 
-```mermaid
-flowchart LR
-    A["📱 Scan QR<br/><sub>Event poster</sub>"] --> B["📸 Take Photo<br/><sub>getUserMedia</sub>"]
-    B --> C["🖼️ Auto-Framed<br/><sub>HTML Canvas</sub>"]
-    C --> D["📤 Download / Share<br/><sub>Web Share API</sub>"]
-
-    classDef step fill:#0a0c09,stroke:#b8ff2e,stroke-width:2px,color:#f4f7ef;
-    class A,B,C,D step;
+```text
+┌────────────┐        ┌──────────────────┐        ┌───────────────┐        ┌────────────────────┐
+│  Scan QR   │  --->  │    Take photo    │  --->  │  Auto-framed  │  --->  │  Download / Share  │
+│  (poster)  │        │  (getUserMedia)  │        │   (<canvas>)  │        │  (Web Share API)   │
+└────────────┘        └──────────────────┘        └───────────────┘        └────────────────────┘
 ```
 
 1. **Home**: guests tap **Take a Photo**, or upload one from the gallery.
