@@ -201,7 +201,7 @@ async function drawFrame(source) {
   drawSpaced(ctx, "RAJARATA UNIVERSITY OF SRI LANKA", 60, 74, 3.5);
   ctx.fillStyle = FRAME.text;
   ctx.font = '600 23px "Inter", sans-serif';
-  drawSpaced(ctx, "#MSClubOpeningDay2026", W - 60, 74, 0.5, "right");
+  drawSpaced(ctx, "#MSClub", W - 60, 74, 0.5, "right");
 
   // Photo with gradient ring
   const px = 60, py = 110, ps = 960, pr = 44, ring = 7;
@@ -357,7 +357,7 @@ async function share() {
   // Desktop / unsupported: save the image, then the user can post it
   download();
   $("#share-hint").innerHTML =
-    "Downloaded! Post it on <b>LinkedIn</b>, <b>Facebook</b> or <b>WhatsApp</b> and tag <b>MS Club</b>.";
+    "Downloaded! Post it on <b>LinkedIn</b> or <b>Facebook</b> and tag <b>MS Club</b>.";
 }
 
 /* ---------- Events ---------- */
