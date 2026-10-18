@@ -44,7 +44,7 @@ The official poster displayed at the **MS Club Opening Day 2026** venue. Guests 
 | 🖼️ | **Instant framing** | 1080 × 1350 (4:5) branded frame drawn on `<canvas>` in MS Club colours |
 | ⬇️ | **One-tap download** | High-quality JPEG saved straight to the device |
 | 📤 | **Native share** | Web Share API sends the photo to WhatsApp, LinkedIn, Facebook, Instagram and more |
-| 🔗 | **Follow links** | Quick links to the club's LinkedIn, Facebook and WhatsApp channel |
+| 🔗 | **Follow links** | Quick links to the club's LinkedIn, Facebook, Instagram and WhatsApp channel |
 | 🖼️ | **Gallery fallback** | Upload an existing photo, or open the phone's own camera if browser access is blocked |
 | 🎉 | **Delightful touches** | Colour-sweep heading, animated viewfinder, confetti on finish |
 | 📐 | **No-scroll layout** | Every screen fits the viewport on phones and desktops |
@@ -144,6 +144,7 @@ To deploy your own copy:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-MS_Club_RUSL-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/ms-club-rajarata-university-of-sri-lanka)
 [![Facebook](https://img.shields.io/badge/Facebook-MS_Club_RUSL-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/profile.php?id=61568492710655)
+[![Instagram](https://img.shields.io/badge/Instagram-ms__club__rusl-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ms_club_rusl/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029Vb6B2Qf8KMqcjGJEsx2k)
 
 </div>
